@@ -20,7 +20,7 @@ function reducer(state, {type,payload}){
                     overwrite: false
                 }
             }
-
+            
             if (payload.digit === "0" && state.curOperand === "0"){
                 return state
             }
@@ -148,10 +148,6 @@ function formatOperand(operand){
 
 function App(){
     const [{curOperand,prevOperand, operation }, dispatch] = useReducer(reducer,{})
-    // dispatch({
-    //     type :ACTIONS.ADD_DIGIT,
-    //     payload : {digit: 1}
-    // })
 
     return(
         <div className="calculator-grid">
